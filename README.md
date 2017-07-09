@@ -47,3 +47,10 @@ wikipediaParser.fetchArticleElements("United States").then(function(result)
   console.log(error);
 };
 ```
+## Currenty Supported Elements
+- Titles
+- Paragraphs
+- Subtitles
+- Images
+- Lists
+- Quotes
