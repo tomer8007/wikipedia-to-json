@@ -45,7 +45,7 @@ wikipediaParser.fetchArticleElements("United States").then(function(result)
 }).catch(function(error)
 {
   console.log(error);
-};
+});
 ```
 ## Currenty Supported Elements
 - Titles
