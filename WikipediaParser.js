@@ -2,7 +2,7 @@
 var wikiUtils = require('./WikipediaUtils');
 
 var request = require("request"); // easier HTTP library
-var jsdom = require("jsdom").jsdom; // javascript implementaion of DOM, used here for scrapping web pges
+var jsdom = require("jsdom").JSDOM; // javascript implementaion of DOM, used here for scrapping web pges
 
 var TYPE_MAIN_TITLE = "MAIN_TITLE";
 var TYPE_MAIN_IMAGE_URL = "MAIN_IMAGE_URL";
@@ -89,7 +89,7 @@ function parseWikipediaHTML(html, articleTitle, imageURL)
 {
     console.log("[+] Processing wikipedia response...");
 
-    var doc = jsdom(html);
+    var doc = new jsdom(html).window.document;
     var elements = [];
 
     var mainElement = doc.getElementsByClassName("mw-parser-output")[0];
